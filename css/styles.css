@@ -160,6 +160,7 @@ ul {
 }
 
 .header-link {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -182,6 +183,18 @@ ul {
 .header-link:hover,
 .header-link:focus {
     color: var(--accent-color);
+}
+
+.header-link.current::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
 }
 
 .header-icon {
